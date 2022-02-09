@@ -1,24 +1,163 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cEv-QK-eye">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Tab Bar Controller-->
+        <scene sceneID="SLp-JO-VcJ">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tabBarController id="cEv-QK-eye" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dIP-Rd-GTt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="XRo-w2-dyE" kind="relationship" relationship="viewControllers" id="D3n-hJ-UHy"/>
+                        <segue destination="2JK-fu-vrS" kind="relationship" relationship="viewControllers" id="C4S-BV-Vq8"/>
+                        <segue destination="NrQ-Cu-ijh" kind="relationship" relationship="viewControllers" id="cXs-Mg-wJ8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L9L-8y-ztB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-2600" y="-88"/>
+        </scene>
+        <!--Главная-->
+        <scene sceneID="oDP-OS-gcG">
+            <objects>
+                <viewController id="XRo-w2-dyE" customClass="MainViewController" customModule="VladisExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="BD3-b8-wCc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QbE-HF-avC">
+                                <rect key="frame" x="0.0" y="253" width="414" height="560"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" id="Zcp-eG-bJC">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Zcp-eG-bJC" id="nZH-h4-rRM">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="awy-Ab-coS" userLabel="StackOfDate">
+                                <rect key="frame" x="20" y="94" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Месяц:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-yY-cBE">
+                                        <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Февраль 2022 г." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-79-FDb">
+                                        <rect key="frame" x="190" y="0.0" width="184" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="197" translatesAutoresizingMaskIntoConstraints="NO" id="jSN-Ox-tnK" userLabel="StackOfExpenses">
+                                <rect key="frame" x="20" y="189" width="374" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Затраты:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-gZ-lHv">
+                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5000$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dPN-oo-h9S">
+                                        <rect key="frame" x="297.5" y="0.0" width="76.5" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="9Qf-0u-WBJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QbE-HF-avC" firstAttribute="top" secondItem="jSN-Ox-tnK" secondAttribute="bottom" constant="34" id="0w8-vI-0iC"/>
+                            <constraint firstItem="9Qf-0u-WBJ" firstAttribute="trailing" secondItem="awy-Ab-coS" secondAttribute="trailing" constant="20" id="13F-fH-6Cd"/>
+                            <constraint firstItem="9Qf-0u-WBJ" firstAttribute="trailing" secondItem="jSN-Ox-tnK" secondAttribute="trailing" constant="20" id="3ys-kR-fcE"/>
+                            <constraint firstItem="awy-Ab-coS" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" constant="20" id="CoE-9V-THK"/>
+                            <constraint firstItem="QbE-HF-avC" firstAttribute="trailing" secondItem="9Qf-0u-WBJ" secondAttribute="trailing" id="GLL-xs-q3h"/>
+                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="top" secondItem="awy-Ab-coS" secondAttribute="bottom" constant="65" id="UaR-0G-tXk"/>
+                            <constraint firstItem="QbE-HF-avC" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" id="Y4x-eh-tXi"/>
+                            <constraint firstItem="awy-Ab-coS" firstAttribute="top" secondItem="9Qf-0u-WBJ" secondAttribute="top" constant="50" id="Z4q-5m-iG7"/>
+                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="top" secondItem="awy-Ab-coS" secondAttribute="bottom" constant="65" id="ZzE-4S-rlp"/>
+                            <constraint firstItem="QbE-HF-avC" firstAttribute="bottom" secondItem="9Qf-0u-WBJ" secondAttribute="bottom" id="c3s-9G-o5E"/>
+                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" constant="20" id="ssr-52-CWg"/>
+                            <constraint firstItem="QbE-HF-avC" firstAttribute="top" secondItem="jSN-Ox-tnK" secondAttribute="bottom" constant="34" id="tsx-Jb-bLB"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="lxt-ET-vyV"/>
+                    <connections>
+                        <outlet property="tableView" destination="QbE-HF-avC" id="VUZ-o8-74Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FXo-Dd-xCK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3713.04347826087" y="640.84821428571422"/>
+        </scene>
+        <!--Журнал-->
+        <scene sceneID="OYb-Lz-z3R">
+            <objects>
+                <viewController id="2JK-fu-vrS" customClass="ActivitiesViewController" customModule="VladisExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IaP-wV-jyZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="EGN-o6-9qG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Журнал" image="text.redaction" catalog="system" id="bCR-C7-2s7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lI5-LM-vJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2600" y="641"/>
+        </scene>
+        <!--Настройки-->
+        <scene sceneID="up2-AN-Hxv">
+            <objects>
+                <viewController id="NrQ-Cu-ijh" customClass="SettingsViewController" customModule="VladisExpenseTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GsI-ng-BtX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MEQ-s0-xku">
+                                <rect key="frame" x="174" y="420" width="67" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NR0-sN-7Jl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Настройки" image="gear" catalog="system" id="A3g-gc-7Ka"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1P4-u4-Kf3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1504" y="641"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <image name="text.redaction" catalog="system" width="128" height="100"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
