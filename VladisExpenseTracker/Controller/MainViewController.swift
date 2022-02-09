@@ -9,7 +9,9 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    let category = ["Продукты", "Товары для дома", "Домашние питомцы", "Обучение"]
+    var model = ExpanseModel()
+    
+    @IBOutlet weak var ExpensesLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -22,17 +24,18 @@ class MainViewController: UIViewController {
     
 }
 
+//MARK: - UITableViewDataSource
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return category.count
+        return model.category.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MainCell", for: indexPath)
         
-        cell.textLabel?.text = category[indexPath.row]
+        cell.textLabel?.text = model.category[indexPath.row].nameOfCategory
         
         return cell
         

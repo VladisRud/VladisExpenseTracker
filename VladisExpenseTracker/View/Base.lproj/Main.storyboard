@@ -104,6 +104,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="lxt-ET-vyV"/>
                     <connections>
+                        <outlet property="ExpensesLabel" destination="dPN-oo-h9S" id="l2j-1a-P35"/>
                         <outlet property="tableView" destination="QbE-HF-avC" id="VUZ-o8-74Y"/>
                     </connections>
                 </viewController>
@@ -125,7 +126,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI5-LM-vJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2600" y="641"/>
+            <point key="canvasLocation" x="-2600" y="640.84821428571422"/>
         </scene>
         <!--Настройки-->
         <scene sceneID="up2-AN-Hxv">
