@@ -17,6 +17,8 @@
 		58C2F5C927B3BF7400752F1E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2F5C827B3BF7400752F1E /* MainViewController.swift */; };
 		58C2F5CF27B3CFFF00752F1E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2F5CE27B3CFFF00752F1E /* SettingsViewController.swift */; };
 		58C2F5D127B3D0C100752F1E /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2F5D027B3D0C100752F1E /* ActivitiesViewController.swift */; };
+		58DD011B27C5302600A73714 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD011927C5302600A73714 /* CategoryCell.swift */; };
+		58DD011C27C5302600A73714 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DD011A27C5302600A73714 /* CategoryCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +34,8 @@
 		58C2F5C827B3BF7400752F1E /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		58C2F5CE27B3CFFF00752F1E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		58C2F5D027B3D0C100752F1E /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
+		58DD011927C5302600A73714 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		58DD011A27C5302600A73714 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,8 @@
 			isa = PBXGroup;
 			children = (
 				58C2F5B727B301DF00752F1E /* Main.storyboard */,
+				58DD011927C5302600A73714 /* CategoryCell.swift */,
+				58DD011A27C5302600A73714 /* CategoryCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -164,6 +170,7 @@
 				58C2F5BE27B301E000752F1E /* LaunchScreen.storyboard in Resources */,
 				58C2F5BB27B301E000752F1E /* Assets.xcassets in Resources */,
 				58C2F5B927B301DF00752F1E /* Main.storyboard in Resources */,
+				58DD011C27C5302600A73714 /* CategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +184,7 @@
 				58C2F5B227B301DF00752F1E /* AppDelegate.swift in Sources */,
 				58C2F5B427B301DF00752F1E /* SceneDelegate.swift in Sources */,
 				582A2D5127B430710090363D /* ExpanseModel.swift in Sources */,
+				58DD011B27C5302600A73714 /* CategoryCell.swift in Sources */,
 				58C2F5D127B3D0C100752F1E /* ActivitiesViewController.swift in Sources */,
 				58C2F5CF27B3CFFF00752F1E /* SettingsViewController.swift in Sources */,
 				58C2F5C927B3BF7400752F1E /* MainViewController.swift in Sources */,

@@ -10,11 +10,6 @@ import Foundation
 struct ParametrExpanse {
     
     let nameOfCategory: String
-    let costOfCategory: Double
-    
-    init(name: String, cost: Double) {
-        nameOfCategory = name
-        costOfCategory = cost
-    }
+    var costOfCategory: Double
     
 }

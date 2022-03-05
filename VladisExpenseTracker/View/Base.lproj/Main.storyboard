@@ -37,7 +37,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="QbE-HF-avC">
-                                <rect key="frame" x="0.0" y="253" width="414" height="560"/>
+                                <rect key="frame" x="0.0" y="254" width="414" height="559"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MainCell" id="Zcp-eG-bJC">
@@ -50,25 +50,8 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <stackView opaque="NO" contentMode="scaleToFill" spacing="109" translatesAutoresizingMaskIntoConstraints="NO" id="awy-Ab-coS" userLabel="StackOfDate">
-                                <rect key="frame" x="20" y="94" width="374" height="30"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Месяц:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-yY-cBE">
-                                        <rect key="frame" x="0.0" y="0.0" width="81" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Февраль 2022 г." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LgA-79-FDb">
-                                        <rect key="frame" x="190" y="0.0" width="184" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="197" translatesAutoresizingMaskIntoConstraints="NO" id="jSN-Ox-tnK" userLabel="StackOfExpenses">
-                                <rect key="frame" x="20" y="189" width="374" height="30"/>
+                                <rect key="frame" x="20" y="144" width="374" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Затраты:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BpI-gZ-lHv">
                                         <rect key="frame" x="0.0" y="0.0" width="100.5" height="30"/>
@@ -88,18 +71,13 @@
                         <viewLayoutGuide key="safeArea" id="9Qf-0u-WBJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QbE-HF-avC" firstAttribute="top" secondItem="jSN-Ox-tnK" secondAttribute="bottom" constant="34" id="0w8-vI-0iC"/>
-                            <constraint firstItem="9Qf-0u-WBJ" firstAttribute="trailing" secondItem="awy-Ab-coS" secondAttribute="trailing" constant="20" id="13F-fH-6Cd"/>
-                            <constraint firstItem="9Qf-0u-WBJ" firstAttribute="trailing" secondItem="jSN-Ox-tnK" secondAttribute="trailing" constant="20" id="3ys-kR-fcE"/>
-                            <constraint firstItem="awy-Ab-coS" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" constant="20" id="CoE-9V-THK"/>
+                            <constraint firstItem="QbE-HF-avC" firstAttribute="top" secondItem="jSN-Ox-tnK" secondAttribute="bottom" constant="80" id="Ens-jr-bRX"/>
                             <constraint firstItem="QbE-HF-avC" firstAttribute="trailing" secondItem="9Qf-0u-WBJ" secondAttribute="trailing" id="GLL-xs-q3h"/>
-                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="top" secondItem="awy-Ab-coS" secondAttribute="bottom" constant="65" id="UaR-0G-tXk"/>
+                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="top" secondItem="9Qf-0u-WBJ" secondAttribute="top" constant="100" id="Pgg-bO-gnd"/>
+                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" constant="20" id="TbB-BZ-lb1"/>
                             <constraint firstItem="QbE-HF-avC" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" id="Y4x-eh-tXi"/>
-                            <constraint firstItem="awy-Ab-coS" firstAttribute="top" secondItem="9Qf-0u-WBJ" secondAttribute="top" constant="50" id="Z4q-5m-iG7"/>
-                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="top" secondItem="awy-Ab-coS" secondAttribute="bottom" constant="65" id="ZzE-4S-rlp"/>
                             <constraint firstItem="QbE-HF-avC" firstAttribute="bottom" secondItem="9Qf-0u-WBJ" secondAttribute="bottom" id="c3s-9G-o5E"/>
-                            <constraint firstItem="jSN-Ox-tnK" firstAttribute="leading" secondItem="9Qf-0u-WBJ" secondAttribute="leading" constant="20" id="ssr-52-CWg"/>
-                            <constraint firstItem="QbE-HF-avC" firstAttribute="top" secondItem="jSN-Ox-tnK" secondAttribute="bottom" constant="34" id="tsx-Jb-bLB"/>
+                            <constraint firstItem="9Qf-0u-WBJ" firstAttribute="trailing" secondItem="jSN-Ox-tnK" secondAttribute="trailing" constant="20" id="gA6-8F-Qvx"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Главная" image="house" catalog="system" id="lxt-ET-vyV"/>

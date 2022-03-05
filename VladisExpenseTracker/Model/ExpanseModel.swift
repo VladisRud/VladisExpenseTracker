@@ -10,10 +10,24 @@ import Foundation
 struct ExpanseModel {
     
     var category = [
-        ParametrExpanse(name: "Продукты", cost: 0.0),
-        ParametrExpanse(name: "Товары для дома", cost: 0.0),
-        ParametrExpanse(name: "Кот", cost: 0.0),
-        ParametrExpanse(name: "Развлечения", cost: 0.0)
+        ParametrExpanse(nameOfCategory: "Продукты", costOfCategory: 0.0),
+        ParametrExpanse(nameOfCategory: "Товары для дома", costOfCategory: 0.0),
+        ParametrExpanse(nameOfCategory: "Кот", costOfCategory: 0.0),
+        ParametrExpanse(nameOfCategory: "Развлечения", costOfCategory: 0.0)
     ]
+    
+    var sumOfCost = 0.0
+    
+    mutating func summaOfCost() -> Double {
+        sumOfCost = 0.0
+        category.forEach { cost in
+            sumOfCost += cost.costOfCategory
+        }
+        return sumOfCost
+    }
+    
+    mutating func addCost(rowIndex: Int, newCost: Double) {
+        category[rowIndex].costOfCategory += newCost
+    }
     
 }
