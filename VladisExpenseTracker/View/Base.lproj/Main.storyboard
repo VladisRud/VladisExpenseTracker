@@ -19,9 +19,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="XRo-w2-dyE" kind="relationship" relationship="viewControllers" id="D3n-hJ-UHy"/>
-                        <segue destination="2JK-fu-vrS" kind="relationship" relationship="viewControllers" id="C4S-BV-Vq8"/>
-                        <segue destination="NrQ-Cu-ijh" kind="relationship" relationship="viewControllers" id="cXs-Mg-wJ8"/>
+                        <segue destination="XRo-w2-dyE" kind="relationship" relationship="viewControllers" destinationCreationSelector="Main" id="D3n-hJ-UHy"/>
+                        <segue destination="2JK-fu-vrS" kind="relationship" relationship="viewControllers" destinationCreationSelector="Journal" id="C4S-BV-Vq8"/>
+                        <segue destination="NrQ-Cu-ijh" kind="relationship" relationship="viewControllers" destinationCreationSelector="Settings" id="cXs-Mg-wJ8"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L9L-8y-ztB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -97,10 +97,35 @@
                     <view key="view" contentMode="scaleToFill" id="IaP-wV-jyZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eTm-6A-cnk">
+                                <rect key="frame" x="0.0" y="403" width="414" height="410"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="HistoryCell" id="RQW-kS-DVE">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RQW-kS-DVE" id="aCM-Xa-PJ7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="EGN-o6-9qG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eTm-6A-cnk" firstAttribute="bottom" secondItem="EGN-o6-9qG" secondAttribute="bottom" id="84a-h5-S1F"/>
+                            <constraint firstItem="eTm-6A-cnk" firstAttribute="trailing" secondItem="EGN-o6-9qG" secondAttribute="trailing" id="W6I-VM-yEg"/>
+                            <constraint firstItem="eTm-6A-cnk" firstAttribute="top" secondItem="EGN-o6-9qG" secondAttribute="top" constant="359" id="h80-DB-2FD"/>
+                            <constraint firstItem="eTm-6A-cnk" firstAttribute="leading" secondItem="EGN-o6-9qG" secondAttribute="leading" id="p9n-DF-mEg"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Журнал" image="text.redaction" catalog="system" id="bCR-C7-2s7"/>
+                    <connections>
+                        <outlet property="tableView" destination="eTm-6A-cnk" id="WHp-Mk-JzM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lI5-LM-vJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

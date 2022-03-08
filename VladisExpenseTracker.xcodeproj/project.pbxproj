@@ -19,9 +19,11 @@
 		58C2F5D127B3D0C100752F1E /* ActivitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58C2F5D027B3D0C100752F1E /* ActivitiesViewController.swift */; };
 		58DD011B27C5302600A73714 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58DD011927C5302600A73714 /* CategoryCell.swift */; };
 		58DD011C27C5302600A73714 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 58DD011A27C5302600A73714 /* CategoryCell.xib */; };
+		9AB5FA7E90268E17707B4DED /* Pods_VladisExpenseTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8B30633E7319223FF1F14C8 /* Pods_VladisExpenseTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111A214F00312E37CBFE3C3F /* Pods-VladisExpenseTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VladisExpenseTracker.debug.xcconfig"; path = "Target Support Files/Pods-VladisExpenseTracker/Pods-VladisExpenseTracker.debug.xcconfig"; sourceTree = "<group>"; };
 		582A2D5027B430700090363D /* ExpanseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpanseModel.swift; sourceTree = "<group>"; };
 		582A2D5227B433F50090363D /* ParametrExpanse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParametrExpanse.swift; sourceTree = "<group>"; };
 		58C2F5AE27B301DF00752F1E /* VladisExpenseTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VladisExpenseTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -36,6 +38,8 @@
 		58C2F5D027B3D0C100752F1E /* ActivitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivitiesViewController.swift; sourceTree = "<group>"; };
 		58DD011927C5302600A73714 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		58DD011A27C5302600A73714 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		6E3EB0635AEE509C83B09AA3 /* Pods-VladisExpenseTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VladisExpenseTracker.release.xcconfig"; path = "Target Support Files/Pods-VladisExpenseTracker/Pods-VladisExpenseTracker.release.xcconfig"; sourceTree = "<group>"; };
+		E8B30633E7319223FF1F14C8 /* Pods_VladisExpenseTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VladisExpenseTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +47,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9AB5FA7E90268E17707B4DED /* Pods_VladisExpenseTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EAB513B47DAA8D8AE5CDC90 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E8B30633E7319223FF1F14C8 /* Pods_VladisExpenseTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		257E15DFA3C1E895F44DAC10 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				111A214F00312E37CBFE3C3F /* Pods-VladisExpenseTracker.debug.xcconfig */,
+				6E3EB0635AEE509C83B09AA3 /* Pods-VladisExpenseTracker.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		58C2F5A527B301DF00752F1E = {
 			isa = PBXGroup;
 			children = (
 				58C2F5B027B301DF00752F1E /* VladisExpenseTracker */,
 				58C2F5AF27B301DF00752F1E /* Products */,
+				257E15DFA3C1E895F44DAC10 /* Pods */,
+				1EAB513B47DAA8D8AE5CDC90 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +141,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58C2F5C227B301E000752F1E /* Build configuration list for PBXNativeTarget "VladisExpenseTracker" */;
 			buildPhases = (
+				54F6986D9EEF012E70765982 /* [CP] Check Pods Manifest.lock */,
 				58C2F5AA27B301DF00752F1E /* Sources */,
 				58C2F5AB27B301DF00752F1E /* Frameworks */,
 				58C2F5AC27B301DF00752F1E /* Resources */,
+				FDBE9BD19C947D0CE6DF4750 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,6 +202,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		54F6986D9EEF012E70765982 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VladisExpenseTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FDBE9BD19C947D0CE6DF4750 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VladisExpenseTracker/Pods-VladisExpenseTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VladisExpenseTracker/Pods-VladisExpenseTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VladisExpenseTracker/Pods-VladisExpenseTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		58C2F5AA27B301DF00752F1E /* Sources */ = {
@@ -332,6 +401,7 @@
 		};
 		58C2F5C327B301E000752F1E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 111A214F00312E37CBFE3C3F /* Pods-VladisExpenseTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +431,7 @@
 		};
 		58C2F5C427B301E000752F1E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E3EB0635AEE509C83B09AA3 /* Pods-VladisExpenseTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

@@ -63,7 +63,15 @@ extension MainViewController: UITableViewDelegate {
         let action = UIAlertAction(title: "Добавить", style: .default) { action in
             
             if let newCost = Double(textField.text!) {
-                    self.model.addCost(rowIndex: indexPath.row, newCost: newCost)
+                
+                self.model.addCost(rowIndex: indexPath.row, newCost: newCost)
+                
+                self.model.addHistory(
+                    name: self.model.category[indexPath.row].nameOfCategory,
+                    cost: newCost
+                )
+                
+                print(self.model.historyOfOperation)
                 
             }
             

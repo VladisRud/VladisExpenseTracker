@@ -7,6 +7,7 @@
 
 import Foundation
 
+
 struct ExpanseModel {
     
     var category = [
@@ -28,6 +29,12 @@ struct ExpanseModel {
     
     mutating func addCost(rowIndex: Int, newCost: Double) {
         category[rowIndex].costOfCategory += newCost
+    }
+    
+    var historyOfOperation = [ParametrExpanse]()
+    
+    mutating func addHistory(name: String, cost: Double) {
+        historyOfOperation.append(ParametrExpanse(nameOfCategory: name, costOfCategory: cost))
     }
     
 }

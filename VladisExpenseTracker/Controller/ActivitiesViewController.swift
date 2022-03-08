@@ -8,12 +8,20 @@
 import UIKit
 
 class ActivitiesViewController: UIViewController {
+    
+    var journalModel = ExpanseModel()
+    
 
+    @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        tableView.dataSource = self
+        
     }
+    
+    
     
 
     /*
@@ -26,4 +34,20 @@ class ActivitiesViewController: UIViewController {
     }
     */
 
+}
+
+extension ActivitiesViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return journalModel.historyOfOperation.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
+        
+        cell.textLabel?.text = journalModel.historyOfOperation[indexPath.row].nameOfCategory
+        
+        return cell
+    }
+    
 }
