@@ -8,7 +8,9 @@
 import Foundation
 
 
-struct ExpanseModel {
+class ExpanseModel {
+    
+    static let delegateModel = ExpanseModel()
     
     var category = [
         ParametrExpanse(nameOfCategory: "Продукты", costOfCategory: 0.0),
@@ -19,7 +21,7 @@ struct ExpanseModel {
     
     var sumOfCost = 0.0
     
-    mutating func summaOfCost() -> Double {
+    func summaOfCost() -> Double {
         sumOfCost = 0.0
         category.forEach { cost in
             sumOfCost += cost.costOfCategory
@@ -27,13 +29,13 @@ struct ExpanseModel {
         return sumOfCost
     }
     
-    mutating func addCost(rowIndex: Int, newCost: Double) {
+    func addCost(rowIndex: Int, newCost: Double) {
         category[rowIndex].costOfCategory += newCost
     }
     
     var historyOfOperation = [ParametrExpanse]()
     
-    mutating func addHistory(name: String, cost: Double) {
+    func addHistory(name: String, cost: Double) {
         historyOfOperation.append(ParametrExpanse(nameOfCategory: name, costOfCategory: cost))
     }
     

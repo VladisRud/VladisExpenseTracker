@@ -9,11 +9,11 @@ import UIKit
 
 class MainViewController: UIViewController {
     
-    var model = ExpanseModel()
-    
     @IBOutlet weak var ExpensesLabel: UILabel!
     
     @IBOutlet weak var tableView: UITableView!
+    
+    let activitiesVC = ActivitiesViewController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,7 @@ class MainViewController: UIViewController {
         
         tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: "CategoryCell")
         
-        ExpensesLabel.text = String(format: "%.2f", model.summaOfCost())
+        ExpensesLabel.text = String(format: "%.2f", ExpanseModel.delegateModel.summaOfCost())
         
     }
     
@@ -34,16 +34,16 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return model.category.count
+        return ExpanseModel.delegateModel.category.count
         
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CategoryCell", for: indexPath) as! CategoryCell
         
-        cell.leftLabel.text = model.category[indexPath.row].nameOfCategory
+        cell.leftLabel.text = ExpanseModel.delegateModel.category[indexPath.row].nameOfCategory
         
-        cell.rightLabel.text = String(format: "%.2f", model.category[indexPath.row].costOfCategory)
+        cell.rightLabel.text = String(format: "%.2f", ExpanseModel.delegateModel.category[indexPath.row].costOfCategory)
         
         return cell
         
@@ -64,20 +64,20 @@ extension MainViewController: UITableViewDelegate {
             
             if let newCost = Double(textField.text!) {
                 
-                self.model.addCost(rowIndex: indexPath.row, newCost: newCost)
+                ExpanseModel.delegateModel.addCost(rowIndex: indexPath.row, newCost: newCost)
                 
-                self.model.addHistory(
-                    name: self.model.category[indexPath.row].nameOfCategory,
+                ExpanseModel.delegateModel.addHistory(
+                    name: ExpanseModel.delegateModel.category[indexPath.row].nameOfCategory,
                     cost: newCost
                 )
                 
-                print(self.model.historyOfOperation)
+                print(ExpanseModel.delegateModel.historyOfOperation)
                 
             }
             
             self.tableView.reloadData()
             
-            self.ExpensesLabel.text = String(format: "%.2f", self.model.summaOfCost())
+            self.ExpensesLabel.text = String(format: "%.2f", ExpanseModel.delegateModel.summaOfCost())
             
         }
         

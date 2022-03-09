@@ -8,9 +8,6 @@
 import UIKit
 
 class ActivitiesViewController: UIViewController {
-    
-    var journalModel = ExpanseModel()
-    
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,7 +15,6 @@ class ActivitiesViewController: UIViewController {
         super.viewDidLoad()
         
         tableView.dataSource = self
-        
     }
     
     
@@ -39,13 +35,13 @@ class ActivitiesViewController: UIViewController {
 extension ActivitiesViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return journalModel.historyOfOperation.count
+        return ExpanseModel.delegateModel.historyOfOperation.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "HistoryCell", for: indexPath)
         
-        cell.textLabel?.text = journalModel.historyOfOperation[indexPath.row].nameOfCategory
+        cell.textLabel?.text = ExpanseModel.delegateModel.historyOfOperation[indexPath.row].nameOfCategory
         
         return cell
     }
